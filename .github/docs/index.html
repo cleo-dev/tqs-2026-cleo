@@ -38,13 +38,13 @@
     <!-- TODO: substitua SEU-USUARIO pelo seu nome de usuário no GitHub -->
     <footer>
         Projeto-exemplo da disciplina &middot;
-        <a href="https://github.com/SEU-USUARIO/tqs-2026">código-fonte no GitHub</a>
+        <a href="https://github.com/cleo-dev/tqs-2026-cleo/"">código-fonte no GitHub</a>
     </footer>
 
-    <script type="module">
-        import { validarCpf, validarEmail } from "./validators.js";
+    <script type=" module">
+            import { validarCpf, validarEmail } from "./validators.js";
 
-        document.getElementById("formulario").addEventListener("submit", (e) => {
+            document.getElementById("formulario").addEventListener("submit", (e) => {
             e.preventDefault();
             const cpf = document.getElementById("cpf").value;
             const email = document.getElementById("email").value;
@@ -52,15 +52,15 @@
             const emailValido = validarEmail(email);
             const div = document.getElementById("resultado");
             div.innerHTML = `
-                <div class="resultado ${cpfValido ? "valido" : "invalido"}">
-                    CPF: ${cpfValido ? "válido" : "inválido"}
-                </div>
-                <div class="resultado ${emailValido ? "valido" : "invalido"}">
-                    E-mail: ${emailValido ? "válido" : "inválido"}
-                </div>
+            <div class="resultado ${cpfValido ? " valido" : "invalido" }">
+                CPF: ${cpfValido ? "válido" : "inválido"}
+            </div>
+            <div class="resultado ${emailValido ? " valido" : "invalido" }">
+                E-mail: ${emailValido ? "válido" : "inválido"}
+            </div>
             `;
-        });
-    </script>
+            });
+            </script>
 </body>
 
 </html>
